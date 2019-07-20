@@ -1,11 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Exercise 3</title>
-</head>
-<body>
-    <center>
-        <h1>Daftar Planet</h1>
-    </center>
-</body>
-</html>
+<!DOCTYPE html>  
+ <html>  
+      <head>  
+           <title>Show JSON Data in Jquery Datatables</title>  
+           <link rel="stylesheet" href="tabel.css" />  
+      </head>  
+      <body>  
+           <br /><br />  
+           <div class="container">  
+                <h1 align="center">Show JSON Data in Jquery Datatables</h3><br />  
+                <h3 align="center">data table</h3><br />  
+                <table id="data-table" class="table table-bordered">  
+                     <thead>  
+                          <tr>  
+                               <th>Name</th>  
+                               <th>Rotation period</th>  
+                               <th>Orbital period</th> 
+                               <th>Diameter</th>
+                               <th>Climate</th>
+                               <th>Gravity</th>
+                               <th>Terrain</th>
+                               <th>Surface Water</th>
+                               <th>Population</th>
+                               <th>Residents</th> 
+                               <th>Films</th>
+                          </tr>  
+                     </thead>  
+                </table>  
+           </div> 
+
+           <!-- script -->
+           <script>  
+   $(document).ready(function(){  
+      $('#data-table').DataTable({  
+          "ajax" : "data.json",  
+          "columns"     :     [  
+               { "results" : "name"     },  
+               { "results" : "rotation_period"}, 
+               { "results" : "orbital_period"     },  
+               { "results" : "diameter"     },  
+               { "results" : "climate"     },  
+               { "results" : "gravity"     },  
+               { "results" : "terrain"     },  
+               { "results" : "surface_water"     },  
+               { "results" : "population"     },  
+               { "results" : "residents"     },  
+               { "results" : "films"     },   
+          ]  
+      });  
+   });  
+   </script>   
+      </body>  
+ </html>  
